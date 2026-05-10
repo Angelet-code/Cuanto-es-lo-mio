@@ -1,5 +1,6 @@
 import { Camera } from "lucide-react";
 import type { ChangeEvent } from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import { extractTicketFromImage } from "../features/extraction/extraction.api";
 import { useAppStore } from "../features/app/app.store";
@@ -8,6 +9,14 @@ export function CapturePage() {
   const setStep = useAppStore((state) => state.setStep);
   const setTicketFromExtraction = useAppStore((state) => state.setTicketFromExtraction);
   const [error, setError] = useState<string>();
+
+  useEffect(() => {
+    document.body.classList.add("home-page-body");
+
+    return () => {
+      document.body.classList.remove("home-page-body");
+    };
+  }, []);
 
   async function processImage(file: File) {
     setStep("processing");
