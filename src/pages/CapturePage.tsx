@@ -31,6 +31,7 @@ export function CapturePage() {
 
   return (
     <main className="simple-screen simple-screen--center">
+      <img className="home-logo" src={`${import.meta.env.BASE_URL}kos.jpg`} alt="Kos Gastrobar" />
       <h1 className="home-title">¿Cuánto vale lo mío?</h1>
 
       <label className="camera-button" aria-label="Abrir cámara">
