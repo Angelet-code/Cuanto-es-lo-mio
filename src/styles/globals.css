@@ -39,16 +39,26 @@ button {
   padding: 34px 24px 28px;
 }
 
+.home-screen {
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+  padding:
+    max(18px, env(safe-area-inset-top))
+    24px
+    max(18px, env(safe-area-inset-bottom));
+}
+
 .simple-screen--center {
   display: grid;
   place-items: center;
   align-content: center;
-  gap: 28px;
+  gap: clamp(18px, 4vh, 28px);
 }
 
 .home-logo {
-  width: 94px;
-  height: 94px;
+  width: clamp(70px, 16vh, 94px);
+  height: clamp(70px, 16vh, 94px);
   border-radius: 24px;
   object-fit: cover;
   box-shadow: 0 18px 46px rgba(16, 20, 24, 0.14);
@@ -66,6 +76,11 @@ button {
   text-align: center;
 }
 
+.home-title {
+  max-width: 360px;
+  font-size: clamp(2.15rem, 10vw, 3.65rem);
+}
+
 .screen-title {
   margin-bottom: 34px;
   font-size: clamp(2rem, 9vw, 3.4rem);
@@ -74,8 +89,8 @@ button {
 
 .camera-button {
   display: grid;
-  width: 136px;
-  height: 136px;
+  width: clamp(106px, 22vh, 136px);
+  height: clamp(106px, 22vh, 136px);
   place-items: center;
   border: 1px solid #dde2d7;
   border-radius: 999px;

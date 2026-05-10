@@ -30,11 +30,11 @@ export function CapturePage() {
   }
 
   return (
-    <main className="simple-screen simple-screen--center">
+    <main className="simple-screen simple-screen--center home-screen">
       <img className="home-logo" src={`${import.meta.env.BASE_URL}kos.jpg`} alt="Kos Gastrobar" />
-      <h1 className="home-title">¿Cuánto vale lo mío?</h1>
+      <h1 className="home-title">&iquest;Cu&aacute;nto vale lo m&iacute;o?</h1>
 
-      <label className="camera-button" aria-label="Abrir cámara">
+      <label className="camera-button" aria-label="Abrir camara">
         <Camera size={56} strokeWidth={1.8} />
         <input accept="image/*" capture="environment" type="file" onChange={handleFileChange} />
       </label>
